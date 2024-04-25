@@ -1,0 +1,45 @@
+{
+  "name": "xbtc-protocol",
+  "description": "comoncentz.com build on Ethereum",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx hardhat compile",
+    "flatten": "rm -rf flatten && npx waffle flatten",
+    "testnet:run": "npx hardhat run --network testnet",
+    "testnet:deploy": "npx hardhat deploy --network testnet --tags deploy --show-stack-traces",
+    "testnet:upgrade": "npx hardhat deploy --network testnet --tags upgrade",
+    "testnet:verify": "npx hardhat etherscan-verify --network testnet",
+    "bevm:deploy": "npx hardhat deploy --network bevmtest --tags deploy --show-stack-traces",
+    "bevm:upgrade": "npx hardhat deploy --network bevmtest --tags upgrade --show-stack-traces",
+    "bevm:verify": "npx hardhat etherscan-verify --network bevmtest --show-stack-traces"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@openzeppelin/hardhat-upgrades": "^3.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "@types/node": ">=16.0.0",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^4.0.10",
+    "ethers": "^6.4.0",
+    "hardhat": "^2.14.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.0",
+    "ts-node": ">=8.0.0",
+    "typechain": "^8.3.0",
+    "typescript": ">=4.5.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1",
+    "@openzeppelin/contracts-upgradeable": "^5.0.1",
+    "dotenv": "^16.3.1",
+    "hardhat-deploy": "^0.11.45"
+  }
+}
