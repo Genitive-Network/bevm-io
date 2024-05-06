@@ -22,7 +22,7 @@ var (
 	userAddress      = "0x8a43286e4B655D1f2Aae80F3F6108e455CC0f01d"
 )
 
-func TestName(t *testing.T) {
+func TestMint(t *testing.T) {
 	if err := godotenv.Load("../.env"); err != nil {
 		log.Fatal(err)
 		return
