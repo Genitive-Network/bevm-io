@@ -84,6 +84,8 @@ func main() {
 			)
 
 			if vLog.Topics[0].Hex() == "Transfer" {
+				//if vLog.Topics[0].Hex() == "Transfer" && evn.address == to  交易特定地址 调用fhevm mint 接口传递 发起人 对应的token 给fhevm  mint
+				//mint 成功后 这边做 to address 的token 回收
 				transaction, _, err := client.TransactionByHash(context.Background(), vLog.TxHash)
 				if err != nil {
 					log.Fatal(err)
