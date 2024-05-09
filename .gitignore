@@ -1,0 +1,9 @@
+.env
+node_modules
+deploy
+cache
+artifacts
+typechain-types
+scripts
+.idea
+yarn.lock
